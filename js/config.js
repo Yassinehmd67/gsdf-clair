@@ -1,6 +1,6 @@
 // GSDF CLAIR CONFIG
 
-const COMPANY = {
+window.COMPANY = {
   name: "GSDF CLAIR",
   whatsapp: "212680170327",
   whatsappLink: "https://wa.me/212680170327",

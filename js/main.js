@@ -1,7 +1,7 @@
 // GSDF CLAIR WEBSITE
 
 document.addEventListener("DOMContentLoaded", () => {
-  const config = window.COMPANY || COMPANY;
+  const config = window.COMPANY
 
   const whatsappElements = document.querySelectorAll(
     ".whatsapp-btn, .footer-whatsapp, .floating-whatsapp, .whatsapp-link"
