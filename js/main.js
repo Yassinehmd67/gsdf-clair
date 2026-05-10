@@ -1,8 +1,16 @@
 // GSDF CLAIR WEBSITE
 
 document.addEventListener("DOMContentLoaded", () => {
-  const config = window.COMPANY
+  const config = window.COMPANY;
 
+  if (!config) {
+    console.error(
+      "COMPANY config is missing. Make sure js/config.js is loaded before js/main.js"
+    );
+    return;
+  }
+
+  // WHATSAPP LINKS
   const whatsappElements = document.querySelectorAll(
     ".whatsapp-btn, .footer-whatsapp, .floating-whatsapp, .whatsapp-link"
   );
@@ -13,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.setAttribute("rel", "noopener noreferrer");
   });
 
+  // FACEBOOK / COMMUNITY LINKS
   const facebookElements = document.querySelectorAll(
     ".facebook-group, .community-btn"
   );
@@ -23,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
     element.setAttribute("rel", "noopener noreferrer");
   });
 
+  // MOBILE MENU
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
 
   if (menuBtn && navMenu) {
     menuBtn.addEventListener("click", () => {
       navMenu.classList.toggle("active");
+
       menuBtn.textContent = navMenu.classList.contains("active") ? "×" : "☰";
     });
 
@@ -40,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // SCROLL ANIMATIONS
   const elements = document.querySelectorAll(
     ".card, .service-box, .phone-mockup, .awareness-section, .blog-preview, .final-cta"
   );
@@ -53,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.18 }
+      {
+        threshold: 0.18,
+      }
     );
 
     elements.forEach((el) => observer.observe(el));
@@ -61,11 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach((el) => el.classList.add("show"));
   }
 
+  // BACK TO TOP BUTTON
   const backToTop = document.getElementById("backToTop");
 
   if (backToTop) {
     window.addEventListener("scroll", () => {
-      backToTop.classList.toggle("show", window.scrollY > 500);
+      if (window.scrollY > 500) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
     });
 
     backToTop.addEventListener("click", () => {

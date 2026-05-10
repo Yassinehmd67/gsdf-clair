@@ -494,7 +494,7 @@ a {
 }
 
 .features-list li::before {
-    content: "âœ“";
+    content: "✓";
     width: 28px;
     height: 28px;
     background: #22c55e;
