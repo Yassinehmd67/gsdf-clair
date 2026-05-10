@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
+=======
+User-agent: *
+Allow: /
+
+>>>>>>> 13e1bd1262dcec669fbbced9f601aec95fbd9a83
 Sitemap: https://gsdfclair.com/sitemap.xml
