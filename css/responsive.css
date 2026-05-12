@@ -228,3 +228,11 @@
     }
 
 }
+
+@media (max-width: 899px) {
+    .nav-menu .community-btn {
+        color: var(--text) !important;
+        background: #f4f6fb !important;
+        box-shadow: none;
+    }
+}
