@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuBtn && navMenu) {
     menuBtn.addEventListener("click", () => {
       navMenu.classList.toggle("active");
-
       menuBtn.textContent = navMenu.classList.contains("active") ? "×" : "☰";
     });
 
@@ -80,11 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (backToTop) {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        backToTop.classList.add("show");
-      } else {
-        backToTop.classList.remove("show");
-      }
+      backToTop.classList.toggle("show", window.scrollY > 500);
     });
 
     backToTop.addEventListener("click", () => {
@@ -92,6 +87,42 @@ document.addEventListener("DOMContentLoaded", () => {
         top: 0,
         behavior: "smooth",
       });
+    });
+  }
+
+  // CONTACT CAROUSEL
+  const contactCards = document.getElementById("contactCards");
+  const prevBtn = document.querySelector(".carousel-prev");
+  const nextBtn = document.querySelector(".carousel-next");
+
+  if (contactCards && prevBtn && nextBtn) {
+    const cards = contactCards.querySelectorAll(".contact-card");
+    let currentIndex = 0;
+
+    function showCard(index) {
+      if (!cards.length) return;
+
+      if (index < 0) {
+        currentIndex = 0;
+      } else if (index >= cards.length) {
+        currentIndex = cards.length - 1;
+      } else {
+        currentIndex = index;
+      }
+
+      cards[currentIndex].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      showCard(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      showCard(currentIndex + 1);
     });
   }
 });
