@@ -236,3 +236,12 @@
         box-shadow: none;
     }
 }
+
+@media (max-width: 600px) {
+    .floating-whatsapp {
+        width: 48px !important;
+        height: 48px !important;
+        left: 14px !important;
+        bottom: 18px !important;
+    }
+}
