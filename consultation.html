@@ -1,249 +1,194 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
+    <title>طلب استشارة | GSDF CLAIR</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="أرسل طلب استشارة إلى GSDF CLAIR حول التسيير العقاري، الملكية المشتركة، والخدمات الرقمية بالمغرب."
+    />
 
-    <title>
-        طلب استشارة | GSDF CLAIR
-    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
-    <meta name="description"
-          content="أرسل طلب استشارة إلى GSDF CLAIR حول التسيير العقاري، الملكية المشتركة، والخدمات الرقمية بالمغرب.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+  </head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
-          rel="stylesheet">
+  <body>
+    <header class="header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <h1>GSDF <span>CLAIR</span></h1>
 
-    <link rel="icon"
-          type="image/png"
-          href="assets/logo/favicon.png">
-
-</head>
-
-<body>
-
-<header class="header">
-
-    <div class="container header-content">
-
-        <a href="index.html"
-           class="logo">
-
-            <h1>
-                GSDF <span>CLAIR</span>
-            </h1>
-
-            <img src="assets/logo/logo.png"
-                 alt="GSDF CLAIR Logo"
-                 class="logo-image">
-
+          <img
+            src="assets/logo/logo.png"
+            alt="GSDF CLAIR Logo"
+            class="logo-image"
+          />
         </a>
 
-        <a href="index.html"
-           class="btn btn-outline-blue">
+        <a href="index.html" class="btn btn-outline-blue"> العودة للرئيسية </a>
+      </div>
+    </header>
 
-            العودة للرئيسية
-
-        </a>
-
-    </div>
-
-</header>
-
-<section class="consultation-page">
-
-    <div class="container">
-
+    <section class="consultation-page">
+      <div class="container">
         <div class="consultation-box">
+          <div class="consultation-header">
+            <h1>طلب استشارة</h1>
 
-            <div class="consultation-header">
+            <p>
+              فريق GSDF CLAIR جاهز لمساعدتك في كل ما يتعلق بالتسيير العقاري،
+              الملكية المشتركة، الرقمنة، والإدارة الحديثة للإقامات بالمغرب.
+            </p>
+          </div>
 
-                <h1>
-                    طلب استشارة
-                </h1>
+          <form class="consultation-form" id="consultationForm">
+            <div class="form-group">
+              <label>
+                الاسم الكامل
+                <span class="required-star">*</span>
+              </label>
 
-                <p>
-                    فريق GSDF CLAIR جاهز لمساعدتك في كل ما يتعلق
-                    بالتسيير العقاري، الملكية المشتركة،
-                    الرقمنة، والإدارة الحديثة للإقامات بالمغرب.
-                </p>
-
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="أدخل اسمك الكامل"
+              />
             </div>
 
-            <form class="consultation-form"
-                  id="consultationForm">
+            <div class="form-group">
+              <label>
+                البريد الإلكتروني
+                <span class="required-star">*</span>
+              </label>
 
-                <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="example@email.com"
+              />
+            </div>
 
-                    <label>
-                        الاسم الكامل
-                    </label>
+            <div class="form-group">
+              <label>
+                رقم الهاتف
+                <span class="required-star">*</span>
+              </label>
 
-                    <input type="text"
-                           name="name"
-                           required
-                           placeholder="أدخل اسمك الكامل">
+              <input type="tel" name="phone" required placeholder="+212" />
+            </div>
 
-                </div>
+            <div class="form-group">
+              <label> اسم الإقامة </label>
 
-                <div class="form-group">
+              <input
+                type="text"
+                name="residence_name"
+                placeholder="اسم الإقامة أو المجمع السكني"
+              />
+            </div>
 
-                    <label>
-                        البريد الإلكتروني
-                    </label>
+            <div class="form-group">
+              <label> عنوان الإقامة </label>
 
-                    <input type="email"
-                           name="email"
-                           required
-                           placeholder="example@email.com">
+              <input
+                type="text"
+                name="residence_address"
+                placeholder="المدينة / الحي / العنوان الكامل"
+              />
+            </div>
 
-                </div>
+            <div class="form-group">
+              <label> نوع الاستشارة </label>
 
-                <div class="form-group">
+              <select name="type" required>
+                <option value="">اختر نوع الطلب</option>
 
-                    <label>
-                        رقم الهاتف
-                    </label>
+                <option>استفسار قانوني</option>
 
-                    <input type="tel"
-                           name="phone"
-                           placeholder="+212">
+                <option>طلب تسيير إقامة</option>
 
-                </div>
+                <option>دراسة مشروع</option>
 
-                <div class="form-group">
+                <option>اقتراح شراكة</option>
 
-                    <label>
-                        نوع الاستشارة
-                    </label>
+                <option>دعم منصة IQAMATI</option>
 
-                    <select name="type"
-                            required>
+                <option>استشارة عامة</option>
+              </select>
+            </div>
 
-                        <option value="">
-                            اختر نوع الطلب
-                        </option>
+            <div class="form-group">
+              <label>
+                تفاصيل الاستشارة
+                <span class="required-star">*</span>
+              </label>
 
-                        <option>
-                            استفسار قانوني
-                        </option>
+              <textarea
+                name="message"
+                required
+                placeholder="اكتب تفاصيل طلبك أو استفسارك هنا..."
+              ></textarea>
+            </div>
 
-                        <option>
-                            طلب تسيير إقامة
-                        </option>
+            <div class="consultation-note">
+              تتم معالجة جميع الطلبات بسرية واحترافية، وسيقوم فريق GSDF CLAIR
+              بالتواصل معك في أقرب وقت ممكن.
+            </div>
 
-                        <option>
-                            دراسة مشروع
-                        </option>
+            <button type="submit" class="btn btn-gold submit-btn">
+              إرسال الطلب
+            </button>
 
-                        <option>
-                            اقتراح شراكة
-                        </option>
-
-                        <option>
-                            دعم منصة IQAMATI
-                        </option>
-
-                        <option>
-                            استشارة عامة
-                        </option>
-
-                    </select>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>
-                        تفاصيل الاستشارة
-                    </label>
-
-                    <textarea name="message"
-                              required
-                              placeholder="اكتب تفاصيل طلبك أو استفسارك هنا..."></textarea>
-
-                </div>
-
-                <div class="consultation-note">
-
-                    تتم معالجة جميع الطلبات بسرية واحترافية،
-                    وسيقوم فريق GSDF CLAIR بالتواصل معك
-                    في أقرب وقت ممكن.
-
-                </div>
-
-                <button type="submit"
-                        class="btn btn-gold submit-btn">
-
-                    إرسال الطلب
-
-                </button>
-
-                <div class="secure-info">
-
-                    GSDF CLAIR • التسيير العقاري الميداني والرقمي بالمغرب
-
-                </div>
-
-            </form>
-
+            <div class="secure-info">
+              GSDF CLAIR • التسيير العقاري الميداني والرقمي بالمغرب
+            </div>
+          </form>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-</section>
+    <script>
+      emailjs.init("LIpqquJpqtgfRIYhy");
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      const form = document.getElementById("consultationForm");
 
-<script>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-emailjs.init("LIpqquJpqtgfRIYhy");
+        emailjs
+          .sendForm("service_qgzmkrc", "template_p2cg44r", this)
 
-const form = document.getElementById("consultationForm");
+          .then(() => {
+            alert("تم إرسال طلب الاستشارة بنجاح");
 
-form.addEventListener("submit", function(e) {
+            form.reset();
+          })
 
-    e.preventDefault();
+          .catch((error) => {
+            alert("حدث خطأ أثناء الإرسال");
 
-    emailjs.sendForm(
-        "service_qgzmkrc",
-        "template_p2cg44r",
-        this
-    )
-
-    .then(() => {
-
-        alert("تم إرسال طلب الاستشارة بنجاح");
-
-        form.reset();
-
-    })
-
-    .catch((error) => {
-
-        alert("حدث خطأ أثناء الإرسال");
-
-        console.log(error);
-
-    });
-
-});
-
-</script>
-
-</body>
+            console.log(error);
+          });
+      });
+    </script>
+  </body>
 </html>
